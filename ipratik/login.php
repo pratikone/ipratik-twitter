@@ -1,13 +1,14 @@
-<!--
+<?php
+/*
 Using Abraham's twitter OAuth api 
 Abraham Williams (abraham@abrah.am) http://abrah.am
 
 Coded by :
 Pratik Anand <pratik.preet@gmail.com>  ,  <pratik3d.blogspot.com>
  May-June 2010
--->
 
-<?php
+*/
+
 // require twitterOAuth lib
 require_once('twitteroauth/twitterOAuth.php');
 
@@ -77,8 +78,8 @@ switch ($state) {/*{{{*/
       $_SESSION['oauth_access_token_secret'] = $tok['oauth_token_secret'];
     }
     /* Random copy */
-    $content = 'your account should now be registered with twitter. Check here:<br />';
-    $content .= '<a href="https://twitter.com/account/connections">https://twitter.com/account/connections</a>';
+    /*$content = 'your account should now be registered with twitter. Check here:<br />';
+    $content .= '<a href="https://twitter.com/account/connections">https://twitter.com/account/connections</a>'; */
 
     /* Create TwitterOAuth with app key/secret and user access key/secret */
     $to = new TwitterOAuth($consumer_key, $consumer_secret, $_SESSION['oauth_access_token'], $_SESSION['oauth_access_token_secret']);
@@ -90,35 +91,34 @@ switch ($state) {/*{{{*/
 }/*}}}*/
 ?>
 
+<html>
+  <head>
+    <title>Twitter OAuth in PHP</title>
+  </head>
+  <body>
+    <h1>Welcome to a iPRATIK -twitter webapp created by Pratik Anand <br>&lt pratik.preet@gmail.com &gt </h1>
+    <p>This site is a basic showcase of Twitters new OAuth authentication method. Everything is saved in sessions. If you want to start over <a href='<?php echo $_SERVER['PHP_SELF']; ?>?test=clear'>clear sessions</a>.</p>
 
+    
 
+    <p><pre><?php 
+//print_r($content); 
+echo "<br><a href=$request_link><img src='img/login.gif'/></a>";
+ if(isset($_SESSION['oauth_access_token_secret']))
+   {
+	   echo "<form action='main.php' method='POST'>";
+	   echo "Login<input type='text' name='n1'/>";
+	   echo "<input type='submit' value='Go!'/>";
+	   echo "</form>";
+	 	   
+   }
+ ?><pre></p>
+<pre>
+Created by <b>Pratik Anand</b> 2010 
+email:pratik.preet@gmail.com | blog:pratik3d.blogspot.com | twitter:twitter.com/pratikone
+<br>
 
-<?php //SESSION for username and update msg
-$_SESSION['username']=$_POST['n1'];
-$_SESSION['up_text']=$_POST['up_text'];
-
-//echo "<pre>";
-
-//print_r($content);
-//print_r($content1);
-
-print_r($content);
-//Clear session
-    if(isset($_SESSION['oauth_access_token_secret']))
-{$clear=$_SERVER['PHP_SELF']."?test=clear";
-echo ("<br><a href=$clear>Clear session</a><br>");
-}
-echo "<br>You have to goto login page again after clearing screen";
-
-
-echo "<br><a href=login.html>Goto Login page</a>";
-echo "<br><a href='update.php'>Update status</a>";
-echo "<br><a href='followers.php'>Followers</a>";
-echo "<br><a href='msg.php'>Status</a>";
-echo "<br><a href='replies.php'>Replies</a>";
-
-//echo "</pre>';
-
- ?>
- 
-  
+Get the API powering this at <a href='http://github.com/abraham/twitteroauth'>http://github.com/abraham/twitteroauth</a>
+          
+  </body>
+</html>
