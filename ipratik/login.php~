@@ -115,7 +115,7 @@ echo "<br><a href=$request_link><img src='img/login.gif'/></a>";
  ?><pre></p>
 <pre>
 Created by <b>Pratik Anand</b> 2010 
-email:pratik.preet@gmail.com | blog:<a href='http://pratik3d.blogspot.com'>pratik3d.blogspot.com</a> | twitter:twitter.com/pratikone
+email:pratik.preet@gmail.com | blog:<a href="http://pratik3d.blogspot.com">pratik3d.blogspot.com</a> | twitter:<a href='http://twitter.com/pratikone'>twitter.com/pratikone</a>
 <br>
 
 Get the API powering this at <a href='http://github.com/abraham/twitteroauth'>http://github.com/abraham/twitteroauth</a>
