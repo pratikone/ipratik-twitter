@@ -1,8 +1,10 @@
 Welcome to iPRATIK- my first attempt (successful, too) in making a twitter web application. It is coded entirely in php and curl rendering it suitable for any platform.
 It uses Abraham Williams <abraham@abrah.am > basic OAuth library for basic OAuth functions.
 ***SETUP***
->>You can easily start with a LAMP setup . 
->>After that, you can open it up with localhost://ipratik-twitter/login.php
+
+>>You can easily start with a AMP setup. 
+>>Extract the folder "ipratik" in www folder of your AMP installation (/var/www in linux)
+>>After that, you can open it up with http://127.0.0.1/ipratik/login.php
 >>Click on big blue button to authenticate yourself.
 >> You will be redirected to the same page with a login input at the bottom.
 >>Enter credentials and click on go!
