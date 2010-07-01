@@ -1,5 +1,4 @@
-<html>
-<body>
+
 
 <!--
 Using Abraham's twitter OAuth api 
@@ -11,6 +10,9 @@ Pratik Anand <pratik.preet@gmail.com>  ,  <pratik3d.blogspot.com>
 -->
 
 <?php
+
+error_reporting(0);
+
 // require twitterOAuth lib
 require_once('twitteroauth/twitterOAuth.php');
 
@@ -31,7 +33,8 @@ $consumer_secret = 'OMJemmrf5zgpqfUZx2UrurymBfPBRdILHDUlvP3kwY';
 /*}}}*/
 ?>
 
-
+<html>
+<body>
 
   <p><pre><?php 
 print_r($content); 

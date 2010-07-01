@@ -103,7 +103,7 @@ switch ($state) {/*{{{*/
 
     <p><pre><?php 
 //print_r($content); 
-echo "<br><a href=$request_link><img src='img/login.gif' border='0'/></a>";
+echo "<br><a href=$request_link><img src='img/login.gif'/></a>";
  if(isset($_SESSION['oauth_access_token_secret']))
    {
 	   echo "<form action='main.php' method='POST'>";

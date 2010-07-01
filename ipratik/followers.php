@@ -9,6 +9,9 @@ Pratik Anand <pratik.preet@gmail.com>  ,  <pratik3d.blogspot.com>
 May-June 2010
 -->
 <?php
+//disabling error reporting
+error_reporting(0);
+
 // require twitterOAuth lib
 require_once('twitteroauth/twitterOAuth.php');
 

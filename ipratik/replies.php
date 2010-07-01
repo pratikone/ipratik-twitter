@@ -1,5 +1,3 @@
-<html>
-<body>
 
 <!--
 Using Abraham's twitter OAuth api 
@@ -10,6 +8,9 @@ Pratik Anand <pratik.preet@gmail.com>  ,  <pratik3d.blogspot.com>
  May-June 2010
 -->
 <?php
+//turning off error reporting
+error_reporting(0);
+
 // require twitterOAuth lib
 require_once('twitteroauth/twitterOAuth.php');
 /* Sessions are used to keep track of tokens while user authenticates with twitter */
@@ -32,6 +33,9 @@ $consumer_secret = 'OMJemmrf5zgpqfUZx2UrurymBfPBRdILHDUlvP3kwY';
 
  
 ?>
+<html>
+<body>
+
 <pre>
 <?php
 

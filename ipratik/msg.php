@@ -1,5 +1,4 @@
-<html>
-<body>
+
 
 <!--
 Using Abraham's twitter OAuth api 
@@ -10,6 +9,9 @@ Pratik Anand <pratik.preet@gmail.com>  ,  <pratik3d.blogspot.com>
  May-June 2010
 -->
 <?php
+//disabling error reporting
+error_reporting(0);
+
 // require twitterOAuth lib
 require_once('twitteroauth/twitterOAuth.php');
 
@@ -30,7 +32,12 @@ $consumer_secret = 'OMJemmrf5zgpqfUZx2UrurymBfPBRdILHDUlvP3kwY';
 //}/*}}}*/
 
 
+
+
+echo"<html>";
+echo "<body>";
 ?>
+
 <pre>
 <?php
 echo "Status updates of <b>".$_POST['username']."</b> are :";
